@@ -1,13 +1,9 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.send('Hello from Microservice A!');
 });
 
-app.listen(port, () => {
-  console.log(`Microservice A running on port ${port}`);
-});
-
+// Export app for testing or importing in server.js
 module.exports = app;
